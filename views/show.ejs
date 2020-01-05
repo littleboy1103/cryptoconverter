@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crypto Conveter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Stylish&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Josefin Sans', sans-serif;
+            background: #35495e;
+            margin: 0;
+            
+        }
+        .head{
+            font-family: 'Stylish', sans-serif;
+            margin-bottom: 2rem;
+        }
+        .tit{
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            text-align: center;
+            color: white;
+        
+        }  
+
+    </style>
+</head>
+<body>
+    <!-- Head -->
+    <section class="head">
+        <div class="row">
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="text-center tit">Crypto ==> Currency<br> Converter</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Converter -->
+    <section class="conv">
+        <div class="row">
+            <!-- <div class="cr"> -->
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="jumbotron shadow-lg text-center " style="background: #42b883;">
+    <h1>Amount of <span style="color: red;"> <%= amounti %> </span> <%= cryi %> is Worth <span style="background: yellow;"> <%= pricei %></span> <%= fiati %></h1>
+    <form action="/try" method="GET">
+    <button class="btn btn-lg btn-outline-primary w-75">Convert Again</button>
+</form>
+                       
+
+            </div>
+        </div>
+        </div>
+    </section>
+    
+        
+        
+ 
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        
+         <script>
+    </script>
+</body>
+</html>

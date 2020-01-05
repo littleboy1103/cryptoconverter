@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crypto Conveter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Stylish&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Josefin Sans', sans-serif;
+            background: #35495e;
+            margin: 0;
+            
+        }
+        .head{
+            font-family: 'Stylish', sans-serif;
+            margin-bottom: 2rem;
+        }
+        .tit{
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            text-align: center;
+            color: white;
+        
+        }  
+
+    </style>
+</head>
+<body>
+    
+    <!-- Head -->
+    <section class="head">
+        <div class="row">
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="text-center tit">Crypto ==> Currency<br> Converter</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Converter -->
+    <section class="conv">
+        <div class="row">
+            
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="jumbotron shadow-lg text-center" style="background: #42b883;">
+                        <form action="/" method="POST" >
+                            <select name="cry" id="cry" class="custom-select custom-select-lg mr-4" style="width: auto;">
+                                <option value="BTC">Bitcoin</option>
+                                <option value="ETH">Ethereum</option>
+                                <option value="LTC">Litecoin</option>
+                    
+                            </select>
+                            <img src="https://image.flaticon.com/icons/png/512/1828/1828769.png" alt="" style="width: 2rem;">
+
+                            <select name="fiat" id="fiat" class="custom-select custom-select-lg ml-4" style="width: auto;">
+                                    <option value="USD">US Dollars</option>
+                                    <option value="GBP">GB Pounds</option>
+                                    <option value="EUR">Euros</option>
+                    
+                            </select>
+                            <div>
+                            <input type="text" name="amount" class="form-control mt-4 floatNumber" required placeholder="Enter the Amount..." style="width:auto;display: inline;">
+                            </div>
+                            
+                            <button type="submit" name="button" class="btn btn-lg w-75 btn-dark mt-4" id="dis">Convert</button>
+                        
+                        </form>
+                    
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="load" class="spinner-grow text-dark" style="width: 5rem;height: 5rem;position: absolute;top: 65%;left: 47% ;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+         <script>
+             
+             $('input.floatNumber').on('input', function() {
+                 this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');
+                });
+            document.getElementById("load").style.visibility="hidden";
+$("#dis").click(function(){
+    document.getElementById("load").style.visibility="visible";
+    setTimeout(function(){
+    document.getElementById("load").style.visibility="hidden";
+}, 1500);
+
+  $("#dis").addClass("disabled");
+});
+         </script>
+</body>
+</html>
